@@ -1,5 +1,5 @@
 #include "logic.h"
-#include "iostream"
+#include <iostream>
 using namespace std;
 
 int main() {
