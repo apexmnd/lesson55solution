@@ -1,6 +1,6 @@
 #include "logic.h"
 
-int count_num_digits(int num) {
+int recursion(int num) {
 	// base case
 	if (num < 10)
 	{
@@ -8,5 +8,16 @@ int count_num_digits(int num) {
 	}
 
 	// recursion case
-	return count_num_digits(num / 10) + 1;
+
+	return recursion(num / 10) + 1;
+
+}
+
+int count_num_digits(int num) {
+	// fool-proof
+	if (num < 0) {
+		num *= -1;
+	}
+
+	return recursion(num);
 }
